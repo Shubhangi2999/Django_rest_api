@@ -13,10 +13,6 @@ from .serializers import *
 def partners_list(request):
     if request.method == 'GET':
         data = Partner.objects.all()
-        with open('training.csv', 'w', newline='') as file:
-            writer = csv.writer(file)
-            for partner in data:
-                writer.writerow([partner.id,partner.f_name,partner.l_name,partner.email,partner.contact,partner.age])
         serializer = PartnerSerializer(data, context={'request': request}, many=True)
         return Response(serializer.data)
 
@@ -24,11 +20,6 @@ def partners_list(request):
         serializer = PartnerSerializer(data=request.data)
         if serializer.is_valid():
             serializer.save()
-            list = Partner.objects.all()
-            with open('training.csv', 'w', newline='') as file:
-                writer = csv.writer(file)
-                for partner in list:
-                    writer.writerow([partner.id, partner.f_name, partner.l_name, partner.email, partner.contact, partner.age])
             return Response(status=status.HTTP_201_CREATED)
 
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)

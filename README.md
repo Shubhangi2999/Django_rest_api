@@ -25,11 +25,10 @@ Now, open localhost:8000/webapp/api/partners in a browser.
 
 POST data in this format:
 
-
-  {
-    "f_name": "abc",
-    "l_name": "xyz",
-    "email": "xyz@gmail.com",
-    "contact": "8313115029",
-    "age": "21",
-  }
+    {
+      "f_name": "abc",
+      "l_name": "xyz",
+      "email": "xyz@gmail.com",
+      "contact": "8313115029",
+      "age": "21",
+    }

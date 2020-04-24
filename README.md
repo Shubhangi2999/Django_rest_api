@@ -10,8 +10,6 @@ Install
 
   2- djangorestframework
 
-  3- django-cors-headers
-
   
 After installing the above dependencies, through terminal go to the project directory and run these commands:
 

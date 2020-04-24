@@ -25,6 +25,7 @@ Now, open localhost:8000/webapp/api/partners in a browser.
 
 POST data in this format:
 
+
   {
     "f_name": "abc",
     "l_name": "xyz",
